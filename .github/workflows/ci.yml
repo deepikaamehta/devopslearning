@@ -27,7 +27,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Lint with flake8
-        run: flake8 app/ tests/
+        run: python -m flake8 app/ tests/ 
 
       - name: Run unit tests
         run: pytest

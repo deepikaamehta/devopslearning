@@ -28,6 +28,7 @@ jobs:
           python -m flake8 githubactionsdemo/tests
 
       - name: Run unit tests
-        run: |
-          export PYTHONPATH=githubactionsdemo
-          python -m pytest githubactionsdemo/tests
+        env:
+          PYTHONPATH: githubactionsdemo
+        run: python -m pytest githubactionsdemo/tests
+

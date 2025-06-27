@@ -35,9 +35,7 @@ Edit
 git clone https://github.com/deepikaamehta/devopslearning.git
 cd devopslearning/githubactionsdemo
 2. Create a virtual environment
-bash
-Copy
-Edit
+
 python3 -m venv venv
 source venv/bin/activate
 3. Install dependencies
@@ -46,9 +44,8 @@ Copy
 Edit
 pip install -r requirements.txt
 4. Run tests manually
-bash
-Copy
-Edit
+
+
 pytest
 🛠 GitHub Actions Workflow
 The CI pipeline is defined in:
@@ -71,9 +68,7 @@ Lints code using flake8
 Runs tests using pytest
 
  Sample Workflow Snippet:
-yaml
-Copy
-Edit
+
 name: Python CI
 
 on:

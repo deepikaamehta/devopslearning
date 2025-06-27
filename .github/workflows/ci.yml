@@ -2,7 +2,7 @@ name: Python CI
 
 on:
   push:
-    branches: [ main ]  # ⬅️ Only runs when you commit and push to main
+    branches: [ main ]
 
 jobs:
   build:
@@ -31,7 +31,6 @@ jobs:
 
       - name: Run unit tests
         run: |
-        export PYTHONPATH=.
-        python -m pytest tests/
-        working-directory: githubactionsdemo
+          export PYTHONPATH=.
+          python -m pytest tests/
 

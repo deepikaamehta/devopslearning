@@ -30,4 +30,6 @@ jobs:
         run: python -m flake8 app/ tests/ 
 
       - name: Run unit tests
-        run: pytest
+        run: python -m pytest tests/
+        working-directory: githubactionsdemo
+

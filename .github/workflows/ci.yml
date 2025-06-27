@@ -1,17 +1,9 @@
-name: Python CI
-
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
 jobs:
   build:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: githubactionsdemo  # 👈 tells GitHub Actions where your code lives
+        working-directory: githubactionsdemo
 
     steps:
       - uses: actions/checkout@v3
@@ -27,9 +19,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Lint with flake8
-        run: python -m flake8 app/ tests/ 
+        run: python -m flake8 app/ tests/
 
       - name: Run unit tests
         run: python -m pytest tests/
-        working-directory: githubactionsdemo
-

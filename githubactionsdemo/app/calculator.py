@@ -1,8 +1,7 @@
+# If this is the very top of the file, just add two blank lines before the function
 
+# <- 1st blank line
 
-
-
-from app.calculator import add
-
-def test_add():
-    assert add(2, 3) == 5
+# <- 2nd blank line
+def add(a, b):
+    return a + b

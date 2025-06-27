@@ -23,7 +23,9 @@ jobs:
           pip install -r githubactionsdemo/requirements.txt
 
       - name: Lint with flake8
-        run: python -m flake8 githubactionsdemo/app githubactionsdemo/tests
+        run: |
+          python -m flake8 githubactionsdemo/app
+          python -m flake8 githubactionsdemo/tests
 
       - name: Run unit tests
         run: |
